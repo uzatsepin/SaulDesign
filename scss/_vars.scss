@@ -4,4 +4,5 @@ $textWhite: #eeeeee;
 $greenColor: #00adb5;
 $backgroundLinks: #393e46;
 $hoverLinks: #454b54;
-$hoverBtn: rgba(57, 62, 70, 0.75);
+$hoverBtn: rgba($backgroundLinks, 0.75);
+$backgroundItem: rgba($backgroundLinks, 0.5);
