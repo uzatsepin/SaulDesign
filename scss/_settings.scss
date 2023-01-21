@@ -1,0 +1,32 @@
+@import "vars";
+
+body {
+  font-family: "Poppins", "Helvetica Neue", Helvetica, sans-serif;
+  background-color: $backgroundColor;
+  font-size: 18px;
+  color: rgba($mainColor, $alpha: 0.75);
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: clip;
+  display: flex;
+  flex-direction: column;
+}
+
+.page {
+  flex: 1 1 auto;
+  padding-top: 85px;
+}
+
+@media (max-width: 500px) {
+  .page {
+    padding-top: 73px;
+  }
+}
+
+[class*="__container"] {
+  max-width: 1280px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
