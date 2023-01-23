@@ -2,6 +2,7 @@
 @import "settings";
 @import "vars";
 @import "global";
+@import "./mixins/breakpoints";
 
 @import "./components/header";
 @import "./components/footer";

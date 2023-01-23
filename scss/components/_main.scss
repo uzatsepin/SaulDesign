@@ -1,31 +1,64 @@
 .main {
   padding: 93px 0;
   border-bottom: 1px solid rgba($mainColor, 0.1);
+  @include desktop {
+    padding: 50px 0;
+  }
+  @include tablet {
+    padding: 35px 0;
+  }
   &__container {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @include desktop {
+      flex-direction: column;
+      align-items: stretch;
+    }
   }
   &__content {
     flex: 1 1 auto;
     padding-right: 20px;
+    @include desktop {
+      padding-right: 0;
+    }
   }
   &__title {
     font-weight: 700;
     font-size: 96px;
     text-transform: uppercase;
     color: $textWhite;
+    @include desktop {
+      text-align: center;
+    }
+    @include tablet {
+      font-size: 65px;
+    }
+    @include sm-mobile {
+      font-size: 45px;
+    }
     & span {
       color: $greenColor;
     }
     &:not(:last-child) {
       margin-bottom: 48px;
+      @include tablet {
+        margin-bottom: 25px;
+      }
     }
   }
   &__buttons {
     display: flex;
     align-items: center;
     gap: 24px;
+    @include desktop {
+      justify-content: center;
+    }
+    @include sm-mobile {
+      gap: 10px;
+      flex-direction: column;
+      align-items: stretch;
+    }
   }
   &__cv-button span {
     padding-right: 34px;
@@ -34,57 +67,12 @@
   }
   &__image {
     flex: 0 0 42.8%;
-    & img {
-      max-width: 100%;
-    }
-  }
-}
-
-@media (max-width: 1280px) {
-  .main {
-    padding: 50px 0;
-    &__container {
-      flex-direction: column;
-      align-items: stretch;
-    }
-    &__content {
-      padding-right: 0;
-    }
-    &__image {
+    @include desktop {
       flex: 0 0 auto;
       margin: 0 auto;
     }
-    &__buttons {
-      justify-content: center;
-    }
-    &__title {
-      text-align: center;
-    }
-  }
-}
-
-@media (max-width: 767.98px) {
-  .main {
-    padding: 35px 0;
-    &__title {
-      font-size: 65px;
-      &:not(:last-child) {
-        margin-bottom: 25px;
-      }
-    }
-  }
-}
-
-@media (max-width: 497.98px) {
-  .main {
-    padding: 35px 0;
-    &__title {
-      font-size: 45px;
-    }
-    &__buttons {
-      gap: 10px;
-      flex-direction: column;
-      align-items: stretch;
+    & img {
+      max-width: 100%;
     }
   }
 }

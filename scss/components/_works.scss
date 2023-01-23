@@ -5,6 +5,15 @@
     &:not(:last-child) {
       margin-bottom: 20px;
     }
+    @include tablet {
+      text-align: center;
+    }
+  }
+  @include desktop {
+    padding: 70px 0;
+  }
+  @include sm-desktop {
+    padding: 45px 0;
   }
 }
 
@@ -14,11 +23,18 @@
     flex-wrap: wrap;
     gap: 16px;
     margin-bottom: 48px;
+    @include tablet {
+      justify-content: center;
+      margin-bottom: 20px;
+    }
   }
   &__body {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 45px;
+    @include tablet {
+      gap: 15px;
+    }
   }
   &__item {
     background-color: $backgroundItem;
@@ -37,34 +53,5 @@
     width: 100%;
     height: 100%;
     object-fit: contain;
-  }
-}
-
-@media (max-width: 1280px) {
-  .works {
-    padding: 70px 0;
-  }
-}
-
-@media (max-width: 991.98px) {
-  .works {
-    padding: 45px 0;
-  }
-}
-
-@media (max-width: 767.98px) {
-  .works {
-    &__title {
-      text-align: center;
-    }
-  }
-  .items-works {
-    &__navigation {
-      justify-content: center;
-      margin-bottom: 20px;
-    }
-    &__body {
-      gap: 15px;
-    }
   }
 }

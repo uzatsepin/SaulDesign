@@ -1,7 +1,16 @@
 .about {
   padding: 116px 0;
+  @include desktop {
+    padding: 70px 0;
+  }
+  @include sm-desktop {
+    padding: 45px 0;
+  }
   &__container {
     display: flex;
+    @include sm-desktop {
+      flex-direction: column;
+    }
   }
   &__title {
     &:not(:last-child) {
@@ -11,10 +20,18 @@
   &__content {
     flex: 1 1 auto;
     padding-right: 20px;
+    @include sm-desktop {
+      text-align: center;
+      padding-right: 0;
+      margin-bottom: 20px;
+    }
   }
   &__text {
     max-width: 390px;
     line-height: 1.5;
+    @include sm-desktop {
+      max-width: none;
+    }
   }
   &__image {
     flex: 0 0 53.2%;
@@ -22,28 +39,5 @@
   }
   &__image img {
     max-width: 100%;
-  }
-}
-
-@media (max-width: 1280px) {
-  .about {
-    padding: 70px 0;
-  }
-}
-
-@media (max-width: 991.98px) {
-  .about {
-    padding: 45px 0;
-    &__container {
-      flex-direction: column;
-    }
-    &__content {
-      text-align: center;
-      padding-right: 0;
-      margin-bottom: 20px;
-    }
-    &__text {
-      max-width: none;
-    }
   }
 }
