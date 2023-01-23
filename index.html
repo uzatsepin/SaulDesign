@@ -10,6 +10,7 @@
     />
     <link rel="stylesheet" href="./css/style.min.css" />
     <title>SaulDesign</title>
+    <script defer src="/js/script.js"></script>
   </head>
   <body>
     <div class="wrapper">
@@ -21,13 +22,13 @@
           <nav class="header__menu menu">
             <ul class="menu__list">
               <li class="menu__item">
-                <a href="#" class="menu__link">Home</a>
+                <a data-goto=".main" href="#" class="menu__link">Home</a>
               </li>
               <li class="menu__item">
-                <a href="#" class="menu__link">About Me</a>
+                <a data-goto=".about" href="#" class="menu__link">About Me</a>
               </li>
               <li class="menu__item">
-                <a href="#" class="menu__link">Contact</a>
+                <a data-goto=".contacts" href="#" class="menu__link">Contact</a>
               </li>
             </ul>
           </nav>
@@ -71,23 +72,27 @@
             <h2 class="works__title title"></h2>
             <div class="works__items items-works">
               <nav class="items-works__navigation">
-                <button class="items-works__type button button_dark active">All</button>
-                <button class="items-works__type button button_dark">UI</button>
-                <button class="items-works__type button button_dark">UX</button>
-                <button class="items-works__type button button_dark">Web Design</button>
+                <button data-work-type="" class="items-works__type button button_dark active">
+                  All
+                </button>
+                <button data-work-type="ui" class="items-works__type button button_dark">UI</button>
+                <button data-work-type="ux" class="items-works__type button button_dark">UX</button>
+                <button data-work-type="wd" class="items-works__type button button_dark">
+                  Web Design
+                </button>
               </nav>
               <div class="items-works__body">
-                <a href="#" class="items-works__item">
+                <a data-work-type="ui" href="#" class="items-works__item">
                   <div class="items-works__image">
                     <img src="img/works/works/work-1.png" alt="Work-1" />
                   </div>
                 </a>
-                <a href="#" class="items-works__item">
+                <a data-work-type="ux" href="#" class="items-works__item">
                   <div class="items-works__image">
                     <img src="img/works/works/work-2.png" alt="Work-2" />
                   </div>
                 </a>
-                <a href="#" class="items-works__item">
+                <a data-work-type="wd" href="#" class="items-works__item">
                   <div class="items-works__image">
                     <img src="img/works/works/work-3.png" alt="Work-3" />
                   </div>
@@ -140,13 +145,22 @@
           <nav class="footer__menu menu__footer">
             <ul class="menu-footer__list">
               <li class="menu-footer__item">
-                <a href="#  " class="menu-footer__link menu-footer__link_home">Home</a>
+                <a data-goto=".main" href="#  " class="menu-footer__link menu-footer__link_home"
+                  >Home</a
+                >
               </li>
               <li class="menu-footer__item">
-                <a href="#  " class="menu-footer__link menu-footer__link_about">About Me</a>
+                <a data-goto=".about" href="#  " class="menu-footer__link menu-footer__link_about"
+                  >About Me</a
+                >
               </li>
               <li class="menu-footer__item">
-                <a href="#  " class="menu-footer__link menu-footer__link_contacts">Contact</a>
+                <a
+                  data-goto=".contacts"
+                  href="#  "
+                  class="menu-footer__link menu-footer__link_contacts"
+                  >Contact</a
+                >
               </li>
             </ul>
           </nav>
